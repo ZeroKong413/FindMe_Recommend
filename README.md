@@ -38,7 +38,7 @@ Backend
 
 ## API 명세서
 #### 추천 컨텐츠 점수 기반 그룹 선정
-- URL: /Recommend/
+- URL: http://43.200.203.117/Recommend/
 - Method: POST
 - 설명: scores 배열을 받아 각 그룹(A,B,C,D)의 합을 계산하고 최대 점수를 가진 그룹을 선정함. 점수가 동일한 경우 랜덤으로 그룹을 선택함.
 - Request Body: json형태 { "scores": [integer, integer,...,integer] // 12개의 정수 배열}
@@ -46,7 +46,7 @@ Backend
 
 
 #### 추천 컨텐츠 제공
-- URL: /Recommend/Content/
+- URL: http://43.200.203.117/Recommend/Content/
 - Method: POST
 - 설명: keyword로 받은 그룹(A,B,C,D)에 따라 추천 컨텐츠를 제공함. content_type에 따라서 영화, 책, 노래, 또는 모든 컨텐츠를 무작위로 반환함.
 - Request Body: json형태 
@@ -86,7 +86,7 @@ Backend
 
 
 #### 컨텐츠 저장
-- URL:/Recommend/Save/
+- URL:http://43.200.203.117/Recommend/Save/
 - Method: POST
 - 설명: 주어진 데이터를 기반으로 컨텐츠를 저장함.
 - Request Body: json 형태
@@ -107,7 +107,7 @@ Backend
 
 
 #### 저장된 컨텐츠 조회
-- URL: /Recommend/Get_saved/<str:nickname>/
+- URL: http://43.200.203.117/Recommend/Get_saved/<str:nickname>/
 - Method: GET
 - 설명: 주어진 닉네임으로 저장된 모든 컨텐츠를 반환함.
 - Response: json 형태
@@ -126,7 +126,7 @@ Backend
 
 
 #### 저장된 컨텐츠 삭제
-- URL: /Recommend/Delete/
+- URL: http://43.200.203.117/Recommend/Delete/
 - Method: DELETE
 - 설명: 주어진 닉네임과 타이틀을 기반으로 컨텐츠를 삭제함.
 - Request Body: json 형태
